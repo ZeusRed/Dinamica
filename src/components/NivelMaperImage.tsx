@@ -26,14 +26,14 @@ function NivelMaperImage() {
         routes: [
           {
             key: 1,
-            route: "src/assets/images/level1/s1.jpeg",
+            route: "/assets/images/level1/s1.jpeg",
           },
           {
             key: 2,
-            route: "src/assets/images/level1/s2.jpeg",
+            route: "/assets/images/level1/s2.jpeg",
             isUpLevel: true,
           },
-          { key: 3, route: "src/assets/images/level1/s3.jpeg" },
+          { key: 3, route: "/assets/images/level1/s3.jpeg" },
         ],
       },
       {
@@ -41,12 +41,12 @@ function NivelMaperImage() {
         routes: [
           {
             key: 1,
-            route: "src/assets/images/level2/e1.jpeg",
+            route: "/assets/images/level2/e1.jpeg",
             isUpLevel: true,
           },
-          { key: 2, route: "src/assets/images/level2/e2.jpeg" },
-          { key: 3, route: "src/assets/images/level2/e3.jpeg" },
-          { key: 4, route: "src/assets/images/level2/e4.jpeg",isUpLevel: true },
+          { key: 2, route: "/assets/images/level2/e2.jpeg" },
+          { key: 3, route: "/assets/images/level2/e3.jpeg" },
+          { key: 4, route: "/assets/images/level2/e4.jpeg",isUpLevel: true },
         ],
       },
       {
@@ -54,10 +54,10 @@ function NivelMaperImage() {
         routes: [
           {
             key: 1,
-            route: "src/assets/images/level3/img1.jpg",
+            route: "/assets/images/level3/img1.jpg",
             isUpLevel: true,
           },
-          { key: 2, route: "src/assets/images/level3/img2.jpg" },
+          { key: 2, route: "/assets/images/level3/img2.jpg" },
         ],
       },
       {
@@ -65,10 +65,10 @@ function NivelMaperImage() {
         routes: [
           {
             key: 1,
-            route: "src/assets/images/level4/img1.jpg",
+            route: "/assets/images/level4/img1.jpg",
             isUpLevel: true,
           },
-          { key: 2, route: "src/assets/images/level4/img2.jpg" },
+          { key: 2, route: "/assets/images/level4/img2.jpg" },
         ],
       },
       {
@@ -76,10 +76,10 @@ function NivelMaperImage() {
         routes: [
           {
             key: 1,
-            route: "src/assets/images/level5/img1.jpg",
+            route: "/assets/images/level5/img1.jpg",
             isUpLevel: true,
           },
-          { key: 2, route: "src/assets/images/level5/img2.jpg" },
+          { key: 2, route: "/assets/images/level5/img2.jpg" },
         ],
       },
     ],
