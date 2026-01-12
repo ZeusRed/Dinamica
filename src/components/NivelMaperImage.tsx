@@ -2,6 +2,17 @@ import { useEffect, useState, useMemo } from "react";
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
 import ButtonCardImage from "./ButtonCardImage";
+
+import s1 from "../assets/images/level1/s1.jpeg";
+import s2 from "../assets/images/level1/s2.jpeg";
+import s3 from "../assets/images/level1/s3.jpeg";
+
+import e1 from "../assets/images/level2/e1.jpeg";
+import e2 from "../assets/images/level2/e2.jpeg";
+import e3 from "../assets/images/level2/e3.jpeg";
+import e4 from "../assets/images/level2/e4.jpeg";
+
+
 interface LevelRoute {
   key: number;
   route: string;
@@ -26,14 +37,14 @@ function NivelMaperImage() {
         routes: [
           {
             key: 1,
-            route: `assets/images/level1/s1.jpeg`,
+            route: s1,
           },
           {
             key: 2,
-            route: `assets/images/level1/s2.jpeg`,
+            route: s2,
             isUpLevel: true,
           },
-          { key: 3, route: `assets/images/level1/s3.jpeg` },
+          { key: 3, route: s3 },
         ],
       },
       {
@@ -41,12 +52,12 @@ function NivelMaperImage() {
         routes: [
           {
             key: 1,
-            route: `assets/images/level2/e1.jpeg`,
+            route: e1,
             isUpLevel: true,
           },
-          { key: 2, route: `assets/images/level2/e2.jpeg` },
-          { key: 3, route: `assets/images/level2/e3.jpeg` },
-          { key: 4, route: `assets/images/level2/e4.jpeg`, isUpLevel: true },
+          { key: 2, route: e2 },
+          { key: 3, route: e3 },
+          { key: 4, route: e4, isUpLevel: true },
         ],
       },
       {
