@@ -11,10 +11,10 @@ function ButtonCardImage({ ruta, updateLevel }: ButtonCardImageProps) {
   return (
     <Card style={{ width: "300px", height: "300px" }}>
       <Button
-        style={{ width: "200px", height: "200px" }}
-        icon={<img src={ruta} style={{ width: "100%", height: "100%" }} />}
-        className="p-button-text"
-        onClick={updateLevel}
+      style={{ width: "200px", height: "200px" }}
+      icon={<img src={ruta} style={{ width: "100%", height: "100%", objectFit: "cover" }} />}
+      className="p-button-text"
+      onClick={updateLevel}
       />
     </Card>
   );

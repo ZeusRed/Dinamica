@@ -22,6 +22,10 @@ import ss3 from "../assets/images/level4/ss3.jpeg";
 import ss4 from "../assets/images/level4/ss4.jpeg";
 import ss5 from "../assets/images/level4/ss5.jpeg";
 
+import l1 from "../assets/images/level5/l1.jpeg";
+import l2 from "../assets/images/level5/l2.jpeg";
+import l3 from "../assets/images/level5/l3.jpeg";
+
 
 import WrongAnswerOverlay from "./WrongAnswer";
 
@@ -126,12 +130,18 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
         routes: [
           {
             key: 1,
-            route: `assets/images/level5/img1.jpg`,
+            route: l1,
             isUpLevel: true,
           },
           {
             key: 2,
-            route: `assets/images/level5/img2.jpg`,
+            route: l2,
+             isUpLevel: true,
+          },
+          {
+            key: 3,
+            route: l3,
+             isUpLevel: true,
           },
         ],
       },
