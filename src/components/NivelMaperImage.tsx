@@ -16,6 +16,13 @@ import m1 from "../assets/images/level3/m1.jpeg";
 import m2 from "../assets/images/level3/m2.jpeg";
 import m3 from "../assets/images/level3/m3.jpeg";
 
+import ss1 from "../assets/images/level4/ss1.jpeg"; 
+import ss2 from "../assets/images/level4/ss2.jpeg"; 
+import ss3 from "../assets/images/level4/ss3.jpeg";
+import ss4 from "../assets/images/level4/ss4.jpeg";
+import ss5 from "../assets/images/level4/ss5.jpeg";
+
+
 import WrongAnswerOverlay from "./WrongAnswer";
 
 interface NivelMaperImageProps {
@@ -93,12 +100,24 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
         routes: [
           {
             key: 1,
-            route: `assets/images/level4/img1.jpg`,
-            isUpLevel: true,
+            route: ss1, 
           },
           {
             key: 2,
-            route: `assets/images/level4/img2.jpg`,
+            route: ss2,
+          },
+          {
+            key: 3,
+            route: ss3,
+            isUpLevel: true,
+          },
+          {
+            key: 4,
+            route: ss4,
+          },
+          {
+            key: 5,
+            route: ss5,
           },
         ],
       },
