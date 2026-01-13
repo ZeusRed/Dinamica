@@ -16,8 +16,8 @@ import m1 from "../assets/images/level3/m1.jpeg";
 import m2 from "../assets/images/level3/m2.jpeg";
 import m3 from "../assets/images/level3/m3.jpeg";
 
-import ss1 from "../assets/images/level4/ss1.jpeg"; 
-import ss2 from "../assets/images/level4/ss2.jpeg"; 
+import ss1 from "../assets/images/level4/ss1.jpeg";
+import ss2 from "../assets/images/level4/ss2.jpeg";
 import ss3 from "../assets/images/level4/ss3.jpeg";
 import ss4 from "../assets/images/level4/ss4.jpeg";
 import ss5 from "../assets/images/level4/ss5.jpeg";
@@ -25,7 +25,6 @@ import ss5 from "../assets/images/level4/ss5.jpeg";
 import l1 from "../assets/images/level5/l1.jpeg";
 import l2 from "../assets/images/level5/l2.jpeg";
 import l3 from "../assets/images/level5/l3.jpeg";
-
 
 import WrongAnswerOverlay from "./WrongAnswer";
 
@@ -73,7 +72,7 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
         routes: [
           {
             key: 1,
-            route: e1, 
+            route: e1,
           },
           { key: 2, route: e2 },
           { key: 3, route: e3 },
@@ -103,24 +102,27 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
         routes: [
           {
             key: 1,
-            route: ss1, 
+            route: ss1,
+            isUpLevel: true,
           },
           {
             key: 2,
             route: ss2,
+            isUpLevel: true,
           },
           {
             key: 3,
             route: ss3,
-            isUpLevel: true,
           },
           {
             key: 4,
             route: ss4,
+            isUpLevel: true,
           },
           {
             key: 5,
             route: ss5,
+            isUpLevel: true,
           },
         ],
       },
@@ -135,12 +137,12 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
           {
             key: 2,
             route: l2,
-             isUpLevel: true,
+            isUpLevel: true,
           },
           {
             key: 3,
             route: l3,
-             isUpLevel: true,
+            isUpLevel: true,
           },
         ],
       },
@@ -169,7 +171,6 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
     setImageRoutes(routes[0].routes);
   };
   const [showWrong, setShowWrong] = useState(false);
-
 
   return (
     <Card>
@@ -205,7 +206,9 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
               >
                 <ButtonCardImage
                   ruta={route.route}
-                  updateLevel={route.isUpLevel ? updateLevel : () => setShowWrong(true)}
+                  updateLevel={
+                    route.isUpLevel ? updateLevel : () => setShowWrong(true)
+                  }
                 />
               </div>
             ))}
@@ -231,7 +234,10 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
           )}
         </div>
       </div>
-      <WrongAnswerOverlay visible={showWrong} onFinish={() => setShowWrong(false)} />
+      <WrongAnswerOverlay
+        visible={showWrong}
+        onFinish={() => setShowWrong(false)}
+      />
     </Card>
   );
 }
