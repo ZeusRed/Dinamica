@@ -14,6 +14,9 @@ import e4 from "../assets/images/level2/e4.jpeg";
 
 import m1 from "../assets/images/level3/m1.jpeg";
 import m2 from "../assets/images/level3/m2.jpeg";
+import m3 from "../assets/images/level3/m3.jpeg";
+
+import WrongAnswerOverlay from "./WrongAnswer";
 
 interface NivelMaperImageProps {
   name: string;
@@ -79,6 +82,10 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
             key: 2,
             route: m2,
           },
+          {
+            key: 3,
+            route: m3,
+          },
         ],
       },
       {
@@ -133,6 +140,8 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
     setIsComplete(false);
     setImageRoutes(routes[0].routes);
   };
+  const [showWrong, setShowWrong] = useState(false);
+
 
   return (
     <Card>
@@ -168,7 +177,7 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
               >
                 <ButtonCardImage
                   ruta={route.route}
-                  updateLevel={route.isUpLevel ? updateLevel : undefined}
+                  updateLevel={route.isUpLevel ? updateLevel : () => setShowWrong(true)}
                 />
               </div>
             ))}
@@ -194,6 +203,7 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
           )}
         </div>
       </div>
+      <WrongAnswerOverlay visible={showWrong} onFinish={() => setShowWrong(false)} />
     </Card>
   );
 }
