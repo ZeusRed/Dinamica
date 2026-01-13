@@ -72,12 +72,12 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
         routes: [
           {
             key: 1,
-            route: `assets/images/level3/m1.jpeg`,
+            route: m1,
             isUpLevel: true,
           },
           {
             key: 2,
-            route: `assets/images/level3/m2.jpeg`,
+            route: m2,
           },
         ],
       },
