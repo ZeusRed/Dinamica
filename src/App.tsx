@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       {!isRegistered && (
         <div className="welcome-screen">
-          <h1>Bienvenido a la Dinámica de Niveles</h1>
+          <h1>Bienvenido a la Dinámica de Rutas de Evacuación</h1>
           <p>Por favor, regístrate para comenzar.</p>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Register setName={setName} setIsRegistered={setIsRegistered} />
