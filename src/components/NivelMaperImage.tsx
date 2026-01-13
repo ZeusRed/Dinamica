@@ -12,6 +12,9 @@ import e2 from "../assets/images/level2/e2.jpeg";
 import e3 from "../assets/images/level2/e3.jpeg";
 import e4 from "../assets/images/level2/e4.jpeg";
 
+import m1 from "../assets/images/level3/m1.jpeg";
+import m2 from "../assets/images/level3/m2.jpeg";
+
 interface NivelMaperImageProps {
   name: string;
   setIsRegistered: (isRegistered: boolean) => void;
@@ -69,12 +72,12 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
         routes: [
           {
             key: 1,
-            route: `assets/images/level3/img1.jpg`,
+            route: `assets/images/level3/m1.jpeg`,
             isUpLevel: true,
           },
           {
             key: 2,
-            route: `assets/images/level3/img2.jpg`,
+            route: `assets/images/level3/m2.jpeg`,
           },
         ],
       },
@@ -144,6 +147,7 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
             >
               Nivel {levelCounter}
             </h1>
+            <h3>Elige la opción correcta</h3>
             <Button
               outlined
               rounded
