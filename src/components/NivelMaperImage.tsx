@@ -73,8 +73,7 @@ function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
         routes: [
           {
             key: 1,
-            route: e1,
-            isUpLevel: true,
+            route: e1, 
           },
           { key: 2, route: e2 },
           { key: 3, route: e3 },
