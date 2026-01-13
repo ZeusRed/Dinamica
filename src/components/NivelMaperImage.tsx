@@ -12,6 +12,10 @@ import e2 from "../assets/images/level2/e2.jpeg";
 import e3 from "../assets/images/level2/e3.jpeg";
 import e4 from "../assets/images/level2/e4.jpeg";
 
+interface NivelMaperImageProps {
+  name: string;
+  setIsRegistered: (isRegistered: boolean) => void;
+}
 
 interface LevelRoute {
   key: number;
@@ -24,7 +28,7 @@ interface LevelRoutes {
   routes: LevelRoute[];
 }
 
-function NivelMaperImage() {
+function NivelMaperImage({ name, setIsRegistered }: NivelMaperImageProps) {
   const [levelCounter, setLevelCounter] = useState<number>(1);
   const [imageRoutes, setImageRoutes] = useState<LevelRoute[]>([]);
   const [isComplete, setIsComplete] = useState<boolean>(false);
@@ -170,8 +174,18 @@ function NivelMaperImage() {
           {isComplete && (
             <div className="m-2 p-3 sm:p-4 border-2 border-green-500 text-green-700 text-center">
               <h2 className="text-lg sm:text-xl md:text-2xl">
-                ¡Felicidades! Has completado todos los niveles.
+                ¡Felicidades {name}! Has completado todos los niveles.
               </h2>
+              <div className="mt-3">
+                <Button
+                  label="Reiniciar Dinámica"
+                  icon="pi pi-refresh"
+                  onClick={
+                    setIsRegistered ? () => setIsRegistered(false) : resetLevel
+                  }
+                  className="p-button-success"
+                />
+              </div>
             </div>
           )}
         </div>
